@@ -16,6 +16,7 @@ extern String image_window;
 extern String result_window;
 extern String templ_window;
 extern int select_method;
+extern int found;
 bool are_equal(Mat&, Mat&, Point&, Point&);
 
 // Function definition.
@@ -72,6 +73,8 @@ bool matchingMethod( int, void* )
   imshow( image_window, img );
   imshow( result_window, result );
   imshow( templ_window, temp );
+  found=1;
+
 
 	return 1;
   }
